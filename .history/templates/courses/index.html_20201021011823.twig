@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes cours{% endblock %}
+{% block classCours %}"nav-link active"{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{{ asset('css/myStyle.css')}}">
+
+<div class="example-wrapper">
+
+<h1 class="font-weight-bold" style="margin-bottom:20px;color:#192a56;">Prochain cours : le samedi 23 Décembre</h1>
+    {% for cours in tab %}
+    <div class="card" style="width: 22rem;margin-right:40px;margin-bottom:40px;display:inline-block;box-shadow: 2px 3px 10px gray;background-color:white">
+
+      <div class="card-body">
+        <h5 class="font-weight-bold" style="margin-bottom:20px;color:#353b48;">{{ cours.Titre }}</h5><hr/>
+        <p class="text-monospace">Enseignant : {{ cours.Enseignant }}</p>
+        <p class="text-monospace">Durée : {{ cours.Durée }} / Jour</p>
+        <p class="text-monospace">Date : {{ cours.Date_cours }}</p>
+        <p class="text-monospace">Heure : {{ cours.Heure_cours }}</p>
+        <div style="background-color:yellow;align-content:left">
+        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">Détails</a>
+        </div>
+      </div>
+
+    </div>
+{% endfor %}
+
+</div>
+
+
+
+{% endblock %}

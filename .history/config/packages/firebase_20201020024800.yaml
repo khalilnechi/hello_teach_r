@@ -1,0 +1,19 @@
+kreait_firebase:
+  projects:
+    my_project:
+      # Remove/Override the following line if running on GCE
+      credentials: '%env(FIREBASE_CREDENTIALS)%'
+      #verifier_cache: cache.app
+      # Optional: If set to true, this project will be used when 
+            # type hinting the component classes of the Firebase SDK,
+            # e.g. Kreait\Firebase\Auth, Kreait\Firebase\Database,
+            # Kreait\Firebase\Messaging, etc.
+            default: true 
+            # Optional: If set to false, the service and its alias can only be
+            # used via dependency injection, and not be retrieved from the
+            # container directly.
+            public: true
+            # Optional: Should only be used if the URL of your Realtime
+            # Database can not be generated with the project id of the 
+            # given Service Account
+            database_uri: "https://helloteachrfirebase.firebaseio.com"

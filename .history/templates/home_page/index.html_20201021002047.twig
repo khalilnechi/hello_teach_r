@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block classAccueil %}"nav-link active"{% endblock %}
+{% block body %}
+
+{# {{ dump()}} #}
+<div class="example-wrapper">
+    {#<h1>Hello {{ app.request.query.get("name") | default("user") }} ! this is {{ controller_name }} ✅</h1>#}
+    <div style="display:inline-block">
+      <img src="{{ asset('images/userIcon.png') }}" style="display:inline" alt="User" height="140px" width="130px"/>
+      <h1 class="font-weight-bold" style="margin-bottom:20px;color:#192a56;">Bonjour, Pierre</h1>
+</div>
+
+
+  
+
+</div>
+{% endblock %}

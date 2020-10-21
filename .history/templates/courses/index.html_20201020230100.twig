@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes cours{% endblock %}
+{% block classCours %}"nav-link active"{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{{ asset('css/myStyle.css')}}">
+
+<div class="example-wrapper">
+
+<h1>Prochain cours : le samedi 23 Décembre</h1>
+    {% for cours in tab %}
+        <div class="card" style="width: 22rem;margin-right:40px;margin-bottom:40px;display:inline-block;box-shadow: 2px 3px 10px gray;background-color:white">
+
+    <div class="card-body">
+    <h5 class="card-title">{{ cours.Titre }}</h5>
+    <p class="card-text">Enseignant : {{ cours.Enseignant }}</p>
+    <p class="card-text">Durée : {{ cours.Durée }} / Jour</p>
+    <p class="card-text">Date : {{ cours.Date_cours }}</p>
+    <p class="card-text">Heure : {{ cours.Heure_cours }}</p>
+    <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">Détails</a>
+    
+    </div>
+    </div>
+{% endfor %}
+
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <img src="{{ asset('images/construction_image.png') }}" alt="Page en construction" />
+      <div class="modal-body">
+        Cette section est encore en cours de construction ...
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

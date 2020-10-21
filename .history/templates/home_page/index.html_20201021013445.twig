@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block classAccueil %}"nav-link active"{% endblock %}
+{% block body %}
+
+{# {{ dump()}} #}
+<div class="example-wrapper"  >
+    {#<h1>Hello {{ app.request.query.get("name") | default("user") }} ! this is {{ controller_name }} ✅</h1>#}
+    <span style="display:inline-flex;">
+      <img src="{{ asset('images/userIcon.png') }}" style="display:inline-flex;" alt="User" height="120px" width="110px"/>
+      <h1 class="font-weight-bold" style="margin:20px; color:#2f3640; margin-top:40px;">Bonjour, Pierre</h1>
+      
+      
+      <div class="card" style="width:20rem;margin-left:100px;
+      display:inline-block;box-shadow: 1px 1px 3px gray;">
+
+       <div class="card-body" style="float:right">
+         <h5 class="font-weight-bold" style="color:#353b48;">Prochain cours</h5>
+         <p style="color:gray">Le samedi 23 decembre</p><hr/>
+         <p class="text-monospace">Cours de Mathematiques avec M.Charles</p>
+         <a href="#" class="btn btn-outline-primary position-btn" data-toggle="modal" data-target="#staticBackdrop">Détails</a>
+       </div>
+
+      </div>
+      
+    </span>
+    <span style="display:inline-flex;">
+    <div class="card2">
+
+       <div class="card-body">
+         <h5 class="font-weight-bold" style="margin-bottom:20px;color:#353b48;">Prendre un cours régulier</h5><hr/>
+         <p class="text-monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.... </p>
+         <a href="#" class="btn btn-outline-primary position-btn" data-toggle="modal" data-target="#staticBackdrop">Réserver</a>
+       </div>
+
+      </div>
+      <div class="card2">
+
+       <div class="card-body">
+         <h5 class="font-weight-bold" style="margin-bottom:20px;color:#353b48;">Prendre un cours particulier</h5><hr/>
+         <p class="text-monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
+         <a href="#" class="btn btn-outline-primary position-btn" data-toggle="modal" data-target="#staticBackdrop">Réserver</a>
+       </div>
+
+      </div>
+      <div class="card2">
+
+       <div class="card-body" style="background-color:white">
+         <h5 class="font-weight-bold" style="margin-bottom:20px;color:#353b48;">Réserver un stage</h5><hr/>
+         <p class="text-monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.... </p>
+         <a href="#" class="btn btn-outline-primary position-btn" data-toggle="modal" data-target="#staticBackdrop">Réserver</a>
+       </div>
+
+      </div>
+    </span>
+
+  
+
+</div>
+{% endblock %}

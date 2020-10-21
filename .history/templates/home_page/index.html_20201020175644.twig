@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block classAccueil %}"nav-link active"{% endblock %}
+{% block body %}
+
+{# {{ dump()}} #}
+<div class="example-wrapper">
+    <h1>Hello {{ app.request.query.get("name") | default("user") }} ! this is {{ controller_name }} ✅</h1>
+
+    <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-outline-primary">Détails</a>
+  </div>
+</div>
+</div>
+{% endblock %}

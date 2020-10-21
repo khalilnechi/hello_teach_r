@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes cours{% endblock %}
+{% block classCours %}"nav-link active"{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{{ asset('css/myStyle.css')}}">
+<div class="example-wrapper">
+
+    {% for i in tab %}
+        <div class="card" style="width: 18rem;height:25em;margin:20px;display:inline-block;">
+
+    <div class="card-body">
+    <h5 class="card-title">{{ i.Titre }}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-outline-primary">Détails</a>
+    
+    </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

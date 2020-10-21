@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Kreait\Firebase\Database;
+use Kreait\Firebase\Symfony\Bundle\FirebaseBundle;
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\ServiceAccount;
+
+class HomePageController extends AbstractController
+{
+
+
+
+    /**
+     * @Route("/", name="home_page")
+     */
+    public function index()
+    {
+        //echo "hello";
+        // $d=new Database();
+        // $serv=new MyService();
+        //$n=firebase.database();
+        $factory = new Factory();
+        $database = $factory->withServiceAccount("../helloteachrfirebase-firebase-adminsdk-fhmb6-f45b618038.json")->createDatabase();
+        //$reference = $database->getReference('/');
+        //$postRef = $database->getReference('/Cours')->push("123");
+        //echo $reference->getSnapshot();
+        //$v = $reference->getSnapshot()->getValue();
+       // var_dump($v);
+
+       $theme = array(
+        'name' => "e",
+        'something' => "qq"
+    );
+    
+    $twig = new Twig_Environment($loader);
+    $app["twig"]->addGlobal("theme", $theme);
+        return $this->render('home_page/index.html.twig', [
+            'controller_name' => 'HomePageController',
+        ]);
+        //return new Response("<html><body>hello</body></html>",Response::HTTP_OK);
+    }
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block classAccueil %}"nav-link active"{% endblock %}
+{% block body %}
+
+{# {{ dump()}} #}
+<div class="example-wrapper">
+    {#<h1>Hello {{ app.request.query.get("name") | default("user") }} ! this is {{ controller_name }} ✅</h1>#}
+      <img src="{{ asset('images/user.png') }}" alt="Page en construction" height="82px" width="80px"/>
+
+
+  
+
+</div>
+{% endblock %}
